@@ -1,4 +1,6 @@
-module.exports = {
+import type { Linter } from 'eslint';
+
+const config: Linter.Config = {
   root: true,
   env: {
     browser: true,
@@ -12,7 +14,7 @@ module.exports = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: import.meta.dirname,
     project: ["./tsconfig.json"],
     ecmaVersion: 2021,
     sourceType: "module",
@@ -40,3 +42,5 @@ module.exports = {
     "@typescript-eslint/no-unnecessary-condition": "warn",
   },
 };
+
+export default config;
