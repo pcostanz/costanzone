@@ -1,5 +1,14 @@
-@import "tailwindcs
-  @layer base {
+@import "tailwindcss";
+
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+ @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
@@ -11,8 +20,8 @@
     --card-foreground: 222.2 47.4% 11.2%;
     --border: 0 0% 0%;
     --input: 0 0% 0%;
-    --primary: 191.6 91.4% 36.5%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45.9 96.7% 64.5%;
+    --primary-foreground: 0 0% 0%;
     --secondary: 222.2 47.4% 11.2%;
     --secondary-foreground: 0 0% 100%;
     --accent: 210 40% 96.1%;
@@ -21,7 +30,7 @@
     --alert-foreground: 210 40% 98%;
     --ring: 0 0% 0%;
     --border-width: 2px;
-    --border-radius: 0;
+    --border-radius: 0.25rem;
     --shadow-base: 0px 0px 0px 0 rgba(0, 0, 0, 1);
     --shadow-sm: 4px 4px 0px 0 rgba(0, 0, 0, 1);
     --shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
@@ -43,8 +52,8 @@
     --card-foreground: 210 40% 98%;
     --border: 0 0% 0%;
     --input: 0 0% 0%;
-    --primary: 191.6 91.4% 36.5%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45.9 96.7% 64.5%;
+    --primary-foreground: 0 0% 0%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 0 0% 0%;
     --accent: 217.2 32.6% 17.5%;
@@ -53,7 +62,7 @@
     --alert-foreground: 210 40% 98%;
     --ring: 0 0% 0%;
     --border-width: 2px;
-    --border-radius: 0;
+    --border-radius: 0.25rem;
     --shadow-base: 0px 0px 0px 0 rgba(0, 0, 0, 1);
     --shadow-sm: 4px 4px 0px 0 rgba(0, 0, 0, 1);
     --shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
@@ -65,15 +74,6 @@
     --transform-press: translate(4px, 4px);
   }
 }
-  s";
-
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
 
 :root {
   --qwik-dark-blue: #006ce9;
