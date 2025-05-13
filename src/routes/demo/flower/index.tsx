@@ -26,7 +26,9 @@ export default component$(() => {
 
   return (
     <div class="container container-center">
-      <div role="presentation" class="ellipsis"></div>
+      <div role="presentation" class="ellipsis">
+        WHAT
+      </div>
       <h1>
         <span class="highlight">Generate</span> Flowers
       </h1>
