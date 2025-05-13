@@ -32,7 +32,7 @@ export default component$(() => {
       </h1>
 
       <input
-        class="input"
+        class="input mt-8"
         type="range"
         value={state.number}
         max={50}

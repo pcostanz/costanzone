@@ -30,7 +30,8 @@ export default tseslint.config(
       '**/*.spec.ts',
 
       // Config files
-      'postcss.config.js'
+      'postcss.config.js',
+      'tailwind.config.js'
     ]
   },
   eslint.configs.recommended,
