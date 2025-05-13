@@ -27,7 +27,10 @@ export default tseslint.config(
       
       // Test files (if you want to ignore them)
       '**/*.spec.tsx',
-      '**/*.spec.ts'
+      '**/*.spec.ts',
+
+      // Config files
+      'postcss.config.js'
     ]
   },
   eslint.configs.recommended,
