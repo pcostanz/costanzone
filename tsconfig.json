@@ -17,7 +17,8 @@
     "outDir": "tmp",
     "noEmit": true,
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "~components/*": ["./src/components/*"]
     },
     "types": ["@cloudflare/workers-types/2023-07-01"]
   },

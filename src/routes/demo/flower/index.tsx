@@ -5,6 +5,8 @@ import {
   useStylesScoped$,
 } from "@builder.io/qwik";
 import { type DocumentHead, useLocation } from "@builder.io/qwik-city";
+
+import { Button } from "~/components/ui";
 import styles from "./flower.css?inline";
 
 export default component$(() => {
@@ -26,9 +28,14 @@ export default component$(() => {
 
   return (
     <div class="container container-center">
-      <div role="presentation" class="ellipsis">
-        WHAT
-      </div>
+      <Button
+        look="primary"
+        onClick$={() => {
+          console.log("clicked");
+        }}
+      >
+        Click me
+      </Button>
       <h1>
         <span class="highlight">Generate</span> Flowers
       </h1>

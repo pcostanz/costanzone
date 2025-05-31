@@ -1,4 +1,5 @@
 import plugin from "tailwindcss/plugin";
+
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "./src/global.css"],
   theme: {
