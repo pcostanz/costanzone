@@ -23,11 +23,13 @@
     "types": ["@cloudflare/workers-types/2023-07-01"]
   },
   "include": [
+    "functions",
     "src",
     "./*.d.ts",
     "./*.config.ts",
     "eslint.config.mjs",
     "postcss.config.js",
-    "tailwind.config.mjs"
+    "tailwind.config.mjs",
+    "adapters"
   ]
 }

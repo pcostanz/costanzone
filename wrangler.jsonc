@@ -5,14 +5,21 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "costanzone",
-	"compatibility_date": "2025-05-10",
+	"compatibility_date": "2025-05-07",
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
 	"pages_build_output_dir": "./dist",
 	"observability": {
 		"enabled": true
-	}
+	},
+	"kv_namespaces": [
+		{
+			"binding": "SCHEDULE_CACHE",
+			"id": "2e248d594ebf454dbdb517a38d826ccd",
+			"preview_id": "dd365e9db0b745c79af450f3c21ea611"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
