@@ -1,22 +1,24 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Button } from "~/components/ui";
+import { TailwindTest } from "~/components/tailwind-test";
 
 export default component$(() => {
   return (
     <>
       <div>Hello world</div>
       <Button look="primary">Click me</Button>
+      <TailwindTest />
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "c o s t a n / z o n e",
   meta: [
     {
-      name: "description",
-      content: "Qwik site description",
+      name: "the costanzone",
+      content: "welcome to the costanzone",
     },
   ],
 };

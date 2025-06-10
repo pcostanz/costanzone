@@ -22,5 +22,12 @@
     },
     "types": ["@cloudflare/workers-types/2023-07-01"]
   },
-  "include": ["src", "./*.d.ts", "./*.config.ts", "eslint.config.mjs"]
+  "include": [
+    "src",
+    "./*.d.ts",
+    "./*.config.ts",
+    "eslint.config.mjs",
+    "postcss.config.js",
+    "tailwind.config.mjs"
+  ]
 }
