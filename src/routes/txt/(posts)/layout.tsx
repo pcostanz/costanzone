@@ -14,7 +14,7 @@ export default component$(() => {
           {/* <span>{formatDate(head.frontmatter.date)}</span> */}
         </time>
       </header>
-      <section class="max-w-3xl mx-auto px-4 py-8 leading-relaxed text-lg">
+      <section class="max-w-3xl mx-auto px-4 py-8 prose prose-lg prose-invert prose-headings:text-gray-50 prose-p:text-gray-300 prose-a:text-blue-400 hover:prose-a:text-blue-300 prose-strong:text-gray-50 prose-code:text-green-400 prose-pre:bg-gray-800 prose-pre:text-gray-200 prose-blockquote:border-l-blue-400 prose-blockquote:text-gray-300 prose-ul:text-gray-300 prose-ol:text-gray-300 prose-li:text-gray-300 prose-hr:border-gray-700">
         <Slot />
       </section>
     </article>

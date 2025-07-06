@@ -1,19 +1,22 @@
 import { component$, type PropsOf } from "@builder.io/qwik";
+import { cn } from "@qwik-ui/utils";
 import { HeaderLogo } from "./header-logo";
 import { HeaderNavLink } from "./header-navlink";
 // import { useMobile } from "~/hooks/useMobile";
 
 type HeaderProps = PropsOf<"header">;
 
-export const Header = component$<HeaderProps>(() => {
+export const Header = component$<HeaderProps>((props) => {
   // const { isMobile } = useMobile();
 
   return (
     <header
-      class={[
+      {...props}
+      class={cn(
         "fixed top-0 left-0 right-0 z-50 font-medium bg-foreground text-background",
-        "pl-4 pr-2 py-2 md:pl-4 md:pr-2 md:py-2 px-4",
-      ].join(" ")}
+        "px-4 py-2",
+        props.class,
+      )}
     >
       {/* Desktop Navigation */}
       <div class="hidden md:flex items-center justify-between">
@@ -21,7 +24,7 @@ export const Header = component$<HeaderProps>(() => {
           <HeaderNavLink exact href="/" title="home" />
           <HeaderNavLink href="/txt" title="writing" />
           <HeaderNavLink href="/img" title="photos" />
-          {/* <HeaderNavLink href="/tsx" title="tsx" /> */}
+          <HeaderNavLink href="/earth" title="earth" />
         </div>
         <HeaderLogo />
       </div>
