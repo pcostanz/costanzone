@@ -16,8 +16,8 @@ export default component$(() => {
   });
 
   return (
-    <div class="min-h-screen bg-gray-900 p-8">
-      <div class="space-y-12 max-w-4xl mx-auto">
+    <div class="min-h-screen bg-gray-900">
+      <div class="space-y-8 max-w-4xl mx-auto">
         <div class="text-center">
           <CostanzoneLogo variant="basic" />
         </div>

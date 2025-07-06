@@ -8,8 +8,7 @@ import { POSTS } from "./(posts)/posts";
 export default component$(() => {
   return (
     <>
-      <h1>Posts</h1>
-      <ul>
+      <ul class="text-lime-100">
         {POSTS.map((post) => (
           <li key={post.slug}>
             {/* <time dateTime={post.date}>{formatDate(post.date)}</time> */}

@@ -17,10 +17,11 @@ export const Header = component$<HeaderProps>(() => {
     >
       {/* Desktop Navigation */}
       <div class="hidden md:flex items-center justify-between">
-        <div class="flex items-center">
-          <HeaderNavLink href="/txt" title="txt" />
-          <HeaderNavLink href="/jpeg" title="jpeg" />
-          <HeaderNavLink href="/tsx" title="tsx" />
+        <div class="flex items-center gap-2">
+          <HeaderNavLink exact href="/" title="home" />
+          <HeaderNavLink href="/txt" title="writing" />
+          <HeaderNavLink href="/img" title="photos" />
+          {/* <HeaderNavLink href="/tsx" title="tsx" /> */}
         </div>
         <HeaderLogo />
       </div>

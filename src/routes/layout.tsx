@@ -26,7 +26,7 @@ export default component$(() => {
   return (
     <div class="min-h-screen overflow-y-auto">
       <Header />
-      <main class="pt-16 md:pt-16">
+      <main class="pt-20 md:pt-20">
         <Slot />
       </main>
       <FooterMobileNav />
