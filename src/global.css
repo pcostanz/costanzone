@@ -1,69 +1,23 @@
 @import "tailwindcss";
 
-@theme {
-  --background: 0 0% 100%;
-  --foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 47.4% 11.2%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 47.4% 11.2%;
-  --border: 0 0% 0%;
-  --input: 0 0% 0%;
-  --primary: 82.7 78% 55.5%;
-  --primary-foreground: 0 0% 0%;
-  --secondary: 222.2 47.4% 11.2%;
-  --secondary-foreground: 0 0% 100%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --alert: 0 84.2% 60.2%;
-  --alert-foreground: 210 40% 98%;
-  --ring: 0 0% 0%;
-  --border-width: 2px;
-  --border-radius: 0.25rem;
-  --shadow-base: 0px 0px 0px 0 rgba(0, 0, 0, 1);
-  --shadow-sm: 4px 4px 0px 0 rgba(0, 0, 0, 1);
-  --shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-md: 6px 6px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-xl: 11px 11px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-2xl: 13px 13px 0px 0px rgba(0, 0, 0, 1);
-  --shadow-inner: inset 2px 2px 0px 0px rgba(0, 0, 0, 0);
-  --transform-press: translate(4px, 4px);
+html {
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  @theme {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --border: 0 0% 0%;
-    --input: 0 0% 0%;
-    --primary: 191.6 91.4% 36.5%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 0 0% 0%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --alert: 0 84.2% 60.2%;
-    --alert-foreground: 210 40% 98%;
-    --ring: 0 0% 0%;
-    --border-width: 2px;
-    --border-radius: 0.25rem;
-    --shadow-base: 0px 0px 0px 0 rgba(0, 0, 0, 1);
-    --shadow-sm: 4px 4px 0px 0 rgba(0, 0, 0, 1);
-    --shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
-    --shadow-md: 6px 6px 0px 0px rgba(0, 0, 0, 1);
-    --shadow-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
-    --shadow-xl: 11px 11px 0px 0px rgba(0, 0, 0, 1);
-    --shadow-2xl: 13px 13px 0px 0px rgba(0, 0, 0, 1);
-    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.01);
-    --transform-press: translate(4px, 4px);
-  }
+@font-face {
+  font-family: 'FiraCode';
+  src: url('/fonts/FiraCode-VF.woff2') format('woff2-variations');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "FiraCode",ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "FiraCode", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "FiraCode", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-background: var(--color-slate-950);
+  --color-background-muted: var(--color-slate-700);
+  --color-foreground: var(--color-emerald-300);
+  --color-foreground-muted: var(--color-emerald-500);
 }
