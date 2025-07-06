@@ -51,7 +51,7 @@ const createPulsingLetters = (): LetterProps[] =>
 
 const createGlitchLetters = (): LetterProps[] =>
   Array.from({ length: 10 }, (_, i) => ({
-    foreground: "text-purple-400",
+    foreground: "text-purple-500/70",
     animation: `glitch 3s ease-in-out infinite ${i * 0.3}s`,
   }));
 
