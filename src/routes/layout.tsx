@@ -2,6 +2,8 @@ import { component$, Slot } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { Header } from "~/components/layout/header/header";
+import { FooterMobileNav } from "~/components/layout/footer/footer-mobile-nav";
+// import { useMobile } from "~/hooks/useMobile";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -24,9 +26,10 @@ export default component$(() => {
   return (
     <div class="min-h-screen overflow-y-auto">
       <Header />
-      <main class="pt-16">
+      <main class="pt-16 md:pt-16">
         <Slot />
       </main>
+      <FooterMobileNav />
       {/* <Footer /> */}
     </div>
   );

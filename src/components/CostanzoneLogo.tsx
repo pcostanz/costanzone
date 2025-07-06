@@ -202,7 +202,8 @@ export default component$<CostanzoneLogoProps>(
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            fontSize: `clamp(${8 * size}px, ${2 * size}vw, ${16 * size}px)`,
+            fontSize: `clamp(${12 * size}px, ${3 * size}vw, ${24 * size}px)`,
+            minHeight: "fit-content",
           }}
         >
           <div style={{ display: "inline-block" }}>
