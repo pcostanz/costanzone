@@ -22,7 +22,7 @@ export const Header = component$<HeaderProps>((props) => {
       <div class="hidden md:flex items-center justify-between">
         <div class="flex items-center gap-2">
           <HeaderNavLink exact href="/" title="home" />
-          <HeaderNavLink href="/txt" title="writing" />
+          <HeaderNavLink href="/txt" title="notes" />
           <HeaderNavLink href="/img" title="photos" />
           <HeaderNavLink href="/earth" title="earth" />
         </div>

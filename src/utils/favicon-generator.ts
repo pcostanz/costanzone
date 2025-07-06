@@ -7,10 +7,6 @@ export const generateFavicon = (letter: string): string => {
 
   if (!ctx) return "";
 
-  // Set background - transparent
-  // ctx.fillStyle = '#0f172a'; // slate-950 background
-  // ctx.fillRect(0, 0, 32, 32);
-
   // Set text properties
   ctx.fillStyle = "#10b981"; // emerald-500 text color
   ctx.font = "bold 32px monospace";
