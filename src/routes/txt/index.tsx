@@ -1,11 +1,25 @@
-import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+
+import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
+// import { formatDate } from "~/utils/formatDate"
+import { POSTS } from "./(posts)/posts";
 
 export default component$(() => {
   return (
-    <div>
-      <h1>TXT</h1>
-    </div>
+    <>
+      <h1>Posts</h1>
+      <ul>
+        {POSTS.map((post) => (
+          <li key={post.slug}>
+            {/* <time dateTime={post.date}>{formatDate(post.date)}</time> */}
+            <Link href={`/txt/${post.slug}`}>
+              <h2>{post.title}</h2>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 });
 

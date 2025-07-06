@@ -1,0 +1,215 @@
+---
+title: Hello, world
+description: A thing
+author: Patrick Costanzo
+og:
+  - title: true
+    description: true
+  # - image: /images/my-image.jpg
+    # image:alt: A picture of me
+---
+
+# Welcome to My First Post
+
+This is the beginning of what promises to be an exciting journey through the world of web development, technology, and everything in between. I'm thrilled to share my thoughts, experiences, and discoveries with you.
+
+## Getting Started with Qwik
+
+Qwik is a revolutionary framework that's changing how we think about web performance. Unlike traditional frameworks that ship JavaScript to the client, Qwik takes a fundamentally different approach.
+
+### Why Qwik Matters
+
+The web has evolved significantly over the past decade. We've moved from simple static pages to complex single-page applications (SPAs) that provide rich, interactive experiences. However, this evolution has come with a cost: increased bundle sizes, slower initial page loads, and complex hydration processes.
+
+Qwik addresses these challenges head-on by:
+
+- **Resumability**: Instead of hydration, Qwik uses resumability to restore application state
+- **Lazy Loading**: Code is loaded only when needed, reducing initial bundle size
+- **Progressive Enhancement**: Applications work without JavaScript and enhance progressively
+
+## Code Examples
+
+Here's a simple Qwik component:
+
+```tsx
+import { component$ } from '@builder.io/qwik';
+
+export const Greeting = component$(() => {
+  return <h1>Hello from Qwik!</h1>;
+});
+```
+
+And here's how you might handle state:
+
+```tsx
+import { component$, useSignal } from '@builder.io/qwik';
+
+export const Counter = component$(() => {
+  const count = useSignal(0);
+  
+  return (
+    <div>
+      <p>Count: {count.value}</p>
+      <button onClick$={() => count.value++}>
+        Increment
+      </button>
+    </div>
+  );
+});
+```
+
+## The Journey from React
+
+Coming from React, the transition to Qwik can be both exciting and challenging. Here are some key differences to keep in mind:
+
+### Component Definition
+
+**React:**
+```jsx
+const MyComponent = () => {
+  return <div>Hello World</div>;
+};
+```
+
+**Qwik:**
+```tsx
+const MyComponent = component$(() => {
+  return <div>Hello World</div>;
+});
+```
+
+### State Management
+
+**React:**
+```jsx
+const [count, setCount] = useState(0);
+```
+
+**Qwik:**
+```tsx
+const count = useSignal(0);
+```
+
+## Performance Benefits
+
+The performance benefits of Qwik are truly remarkable. Here's what you can expect:
+
+1. **Faster Initial Load**: No JavaScript needed for the first render
+2. **Smaller Bundles**: Code splitting happens automatically
+3. **Better SEO**: Server-side rendering without hydration overhead
+4. **Improved Core Web Vitals**: Better LCP, FID, and CLS scores
+
+## Real-World Applications
+
+Qwik is being used in production by companies around the world. Some notable examples include:
+
+- E-commerce platforms
+- Content management systems
+- Marketing websites
+- Progressive web applications
+
+## Getting Your Hands Dirty
+
+To get started with Qwik, you can create a new project using the CLI:
+
+```bash
+npm create qwik@latest
+```
+
+This will set up a new Qwik project with all the necessary dependencies and configuration.
+
+## Advanced Concepts
+
+As you dive deeper into Qwik, you'll encounter several advanced concepts:
+
+### Resource Loading
+
+Qwik's resource loading system is incredibly powerful:
+
+```tsx
+import { resource$ } from '@builder.io/qwik';
+
+export const useUserData = resource$(async () => {
+  const response = await fetch('/api/user');
+  return response.json();
+});
+```
+
+### Event Handling
+
+Event handling in Qwik is optimized for performance:
+
+```tsx
+import { component$, $ } from '@builder.io/qwik';
+
+export const Button = component$(() => {
+  const handleClick = $(() => {
+    console.log('Button clicked!');
+  });
+  
+  return <button onClick$={handleClick}>Click me</button>;
+});
+```
+
+## Best Practices
+
+When working with Qwik, keep these best practices in mind:
+
+1. **Use `component$` for all components**: This ensures proper lazy loading
+2. **Leverage `useSignal` for state**: It's the most efficient way to handle reactive state
+3. **Use `resource$` for data fetching**: It provides automatic caching and error handling
+4. **Keep components small**: Smaller components are easier to lazy load
+5. **Use TypeScript**: Qwik has excellent TypeScript support
+
+## Debugging and Development
+
+Qwik provides excellent developer tools for debugging:
+
+- **Qwik Dev Tools**: Browser extension for inspecting components
+- **Built-in Profiler**: Performance monitoring built into the framework
+- **Error Boundaries**: Graceful error handling and recovery
+
+## Community and Resources
+
+The Qwik community is growing rapidly, and there are many resources available:
+
+- **Official Documentation**: Comprehensive guides and API reference
+- **Discord Community**: Active community for questions and discussions
+- **GitHub Repository**: Open source contributions welcome
+- **YouTube Channel**: Video tutorials and deep dives
+
+## Looking Ahead
+
+The future of web development is exciting, and Qwik is at the forefront of this evolution. As the framework continues to mature, we can expect:
+
+- More ecosystem tools and libraries
+- Enhanced developer experience
+- Better integration with existing tools
+- Performance improvements and optimizations
+
+## Conclusion
+
+Qwik represents a paradigm shift in web development. By focusing on performance and user experience from the ground up, it provides a compelling alternative to traditional frameworks.
+
+Whether you're building a simple blog or a complex web application, Qwik has the tools and capabilities to help you create fast, responsive, and maintainable code.
+
+The journey from React to Qwik might seem daunting at first, but the benefits are well worth the effort. The framework's focus on performance, developer experience, and progressive enhancement makes it an excellent choice for modern web development.
+
+## Additional Resources
+
+For more information about Qwik and related technologies, check out these resources:
+
+- [Qwik Documentation](https://qwik.builder.io/)
+- [Qwik GitHub Repository](https://github.com/BuilderIO/qwik)
+- [Qwik Discord Community](https://discord.gg/qwik)
+- [Qwik YouTube Channel](https://www.youtube.com/@QwikDev)
+
+## Final Thoughts
+
+As we continue to push the boundaries of what's possible on the web, frameworks like Qwik will play an increasingly important role. The focus on performance, developer experience, and user-centric design principles makes Qwik a framework worth learning and adopting.
+
+The web development landscape is constantly evolving, and staying up-to-date with the latest tools and techniques is crucial for building successful applications. Qwik represents the next step in this evolution, providing developers with the tools they need to create fast, responsive, and maintainable web applications.
+
+Thank you for joining me on this journey through the world of Qwik. I hope this post has provided valuable insights and inspired you to explore this exciting framework further.
+
+Happy coding!
