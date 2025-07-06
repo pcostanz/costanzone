@@ -3,6 +3,7 @@ import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { Header } from "~/components/layout/header/header";
 import { FooterMobileNav } from "~/components/layout/footer/footer-mobile-nav";
+import { PerformanceFooter } from "~/components/layout/footer/performance-footer";
 // import { useMobile } from "~/hooks/useMobile";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
@@ -26,10 +27,11 @@ export default component$(() => {
   return (
     <div class="min-h-screen overflow-y-auto">
       <Header />
-      <main class="pt-20 md:pt-20">
+      <main class="pt-20 md:pt-20 pb-16">
         <Slot />
       </main>
       <FooterMobileNav />
+      <PerformanceFooter />
       {/* <Footer /> */}
     </div>
   );
