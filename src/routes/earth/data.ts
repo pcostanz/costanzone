@@ -4,8 +4,77 @@ export const EARTH_IMAGES: EarthImage[] = [
   {
     slug: "coal",
     title: "Coal",
-    description:
-      "A striking aerial view of coal formations or mining operations captured from Google Earth, revealing the intersection of natural resources and human activity.",
+    description: "a photo",
+    date: "2024-12-19",
+    continent: "Africa",
+    country: "Unknown", // You can update this when you know the specific country
+    imagePath: "/images/earth/coal.jpg",
+    tags: ["coal", "mining", "aerial", "topography", "resources"],
+  },
+  {
+    slug: "coal",
+    title: "Coal",
+    description: "a photo",
+    date: "2024-12-19",
+    continent: "Africa",
+    country: "Unknown", // You can update this when you know the specific country
+    imagePath: "/images/earth/coal.jpg",
+    tags: ["coal", "mining", "aerial", "topography", "resources"],
+  },
+  {
+    slug: "coal",
+    title: "Coal",
+    description: "a photo",
+    date: "2024-12-19",
+    continent: "Africa",
+    country: "Unknown", // You can update this when you know the specific country
+    imagePath: "/images/earth/coal.jpg",
+    tags: ["coal", "mining", "aerial", "topography", "resources"],
+  },
+  {
+    slug: "coal",
+    title: "Coal",
+    description: "a photo",
+    date: "2024-12-19",
+    continent: "Africa",
+    country: "Unknown", // You can update this when you know the specific country
+    imagePath: "/images/earth/coal.jpg",
+    tags: ["coal", "mining", "aerial", "topography", "resources"],
+  },
+  {
+    slug: "coal",
+    title: "Coal",
+    description: "a photo",
+    date: "2024-12-19",
+    continent: "Africa",
+    country: "Unknown", // You can update this when you know the specific country
+    imagePath: "/images/earth/coal.jpg",
+    tags: ["coal", "mining", "aerial", "topography", "resources"],
+  },
+  {
+    slug: "coal",
+    title: "Coal",
+    description: "a photo",
+    date: "2024-12-19",
+    continent: "Africa",
+    country: "Unknown", // You can update this when you know the specific country
+    imagePath: "/images/earth/coal.jpg",
+    tags: ["coal", "mining", "aerial", "topography", "resources"],
+  },
+  {
+    slug: "coal",
+    title: "Coal",
+    description: "a photo",
+    date: "2024-12-19",
+    continent: "Africa",
+    country: "Unknown", // You can update this when you know the specific country
+    imagePath: "/images/earth/coal.jpg",
+    tags: ["coal", "mining", "aerial", "topography", "resources"],
+  },
+  {
+    slug: "coal",
+    title: "Coal",
+    description: "a photo",
     date: "2024-12-19",
     continent: "Africa",
     country: "Unknown", // You can update this when you know the specific country

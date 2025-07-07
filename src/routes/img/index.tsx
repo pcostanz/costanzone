@@ -4,7 +4,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 export default component$(() => {
   return (
     <div>
-      <h1>photos i've taken</h1>
+      <h1>photos will go here</h1>
     </div>
   );
 });
