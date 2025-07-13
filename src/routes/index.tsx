@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import { useVisibleTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 // import CostanzoneLogo from "~/components/CostanzoneLogo";
-import Demo from "./demo";
 import { updateFavicon } from "~/utils/favicon-generator";
 
 export default component$(() => {
@@ -43,7 +42,7 @@ export default component$(() => {
       <div class="p-6 rounded-lg">
         <div class="flex justify-center">
           {/* <CostanzoneLogo className="text-green-300" /> */}
-          <Demo />
+          {/* <Demo /> */}
         </div>
 
         <div class="mt-4 text-center text-xs text-slate-400">

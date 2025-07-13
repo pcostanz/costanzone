@@ -25,6 +25,7 @@ export const Header = component$<HeaderProps>((props) => {
           <HeaderNavLink href="/txt" title="notes" />
           <HeaderNavLink href="/img" title="photos" />
           <HeaderNavLink href="/earth" title="earth" />
+          <HeaderNavLink href="/code" title="code" />
         </div>
         <HeaderLogo />
       </div>

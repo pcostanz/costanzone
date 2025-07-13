@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 
 export interface LetterProps {
   foreground?: string;
@@ -10,7 +10,6 @@ export interface LetterProps {
 export interface CostanzoneLogoProps {
   letters?: LetterProps[];
   className?: string;
-  animated?: boolean;
   size?: number; // Font size multiplier (e.g., 0.5 for half size, 2 for double size)
   variant?:
     | "basic"
@@ -145,27 +144,7 @@ const letterData = {
 const word = "costanzone";
 
 export default component$<CostanzoneLogoProps>(
-  ({
-    letters = [],
-    className = "",
-    animated = false,
-    size = 1,
-    variant = "basic",
-  }) => {
-    const animationFrame = useSignal(0);
-
-    useVisibleTask$(() => {
-      if (!animated) return;
-
-      const animate = () => {
-        animationFrame.value = (animationFrame.value + 1) % 60;
-        requestAnimationFrame(animate);
-      };
-
-      const animationId = requestAnimationFrame(animate);
-      return () => cancelAnimationFrame(animationId);
-    });
-
+  ({ letters = [], className = "", size = 1, variant = "basic" }) => {
     // Get letters based on variant if no custom letters provided
     const getLetters = (): LetterProps[] => {
       if (letters.length > 0) return letters;
