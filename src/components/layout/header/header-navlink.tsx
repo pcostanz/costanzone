@@ -28,12 +28,16 @@ export const HeaderNavLink = component$<NavLinkProps>(
       ? location.url.pathname === href
       : location.url.pathname.startsWith(href);
 
+    const responsiveClasses = isMobile
+      ? "px-4 py-2 text-base"
+      : "px-2 py-0 text-sm";
+
     return (
       <Link
         href={href}
         class={cn(
           "inline-flex items-center font-medium transition-colors hover:text-foreground hover:bg-background",
-          isMobile ? "px-4 py-2 text-base" : "px-2 py-0 text-sm",
+          responsiveClasses,
           isActive ? activeClass : inactiveClass,
           className,
         )}

@@ -40,10 +40,7 @@ export default component$(() => {
   return (
     <>
       <div class="p-6 rounded-lg">
-        <div class="flex justify-center">
-          {/* <CostanzoneLogo className="text-green-300" /> */}
-          {/* <Demo /> */}
-        </div>
+        <div class="flex justify-center"></div>
 
         <div class="mt-4 text-center text-xs text-slate-400">
           <p>"they trust me, dumb fucks" - mark zuckerberg</p>

@@ -23,8 +23,8 @@ export const Header = component$<HeaderProps>((props) => {
         <div class="flex items-center gap-2">
           <HeaderNavLink exact href="/" title="home" />
           <HeaderNavLink href="/txt" title="notes" />
-          <HeaderNavLink href="/img" title="photos" />
-          <HeaderNavLink href="/earth" title="earth" />
+          {/* <HeaderNavLink href="/img" title="photos" />
+          <HeaderNavLink href="/earth" title="earth" /> */}
           <HeaderNavLink href="/code" title="code" />
         </div>
         <HeaderLogo />
