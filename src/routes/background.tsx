@@ -26,7 +26,7 @@ export const Background = component$(() => {
   return (
     <div
       key="background"
-      class="fixed inset-0 -top-48 opacity-3 rotate-345 select-none cursor-default -z-10"
+      class="fixed inset-0 -top-48 opacity-8 rotate-345 select-none cursor-default -z-10"
     >
       <div class="space-y-8 max-w-4xl mx-auto">
         {variants.map((variant, index) => (

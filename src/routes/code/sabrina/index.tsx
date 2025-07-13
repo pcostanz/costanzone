@@ -13,7 +13,7 @@ export const head: DocumentHead = {
   title: "sabrina",
   meta: [
     {
-      name: "the costanzone",
+      name: "costanzone",
       content: "get in the zone",
     },
   ],

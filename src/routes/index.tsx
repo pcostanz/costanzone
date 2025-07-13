@@ -54,7 +54,7 @@ export const head: DocumentHead = {
   title: "costan.zone",
   meta: [
     {
-      name: "the costanzone",
+      name: "costanzone",
       content: "get in the zone",
     },
   ],

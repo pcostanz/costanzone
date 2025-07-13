@@ -26,13 +26,25 @@ body {
 }
 
 /* Prevent horizontal scroll on mobile */
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
+  /* Prevent pinch zoom */
+  touch-action: pan-x pan-y;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Improve touch targets on mobile */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   touch-action: manipulation;
 }
 
@@ -48,17 +60,23 @@ textarea {
 }
 
 @font-face {
-  font-family: 'FiraCode';
-  src: url('/fonts/FiraCode-VF.woff2') format('woff2-variations');
+  font-family: "FiraCode";
+  src: url("/fonts/FiraCode-VF.woff2") format("woff2-variations");
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-sans: "FiraCode",ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "FiraCode", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: "FiraCode", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans:
+    "FiraCode", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif:
+    "FiraCode", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:
+    "FiraCode", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   --color-background: var(--color-slate-950);
   --color-background-muted: var(--color-slate-700);
   --color-foreground: var(--color-emerald-300);

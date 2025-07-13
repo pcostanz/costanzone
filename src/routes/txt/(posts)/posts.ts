@@ -20,25 +20,4 @@ export const POSTS: Readonly<Post[]> = [
       "Learn how to create a blog website using the Qwik frontend framework.",
     date: "2024-05-20",
   },
-  {
-    slug: "qwik-from-react",
-    title: "Qwik from React",
-    description:
-      "Learn how to create a blog website using the Qwik frontend framework.",
-    date: "2024-05-20",
-  },
-  {
-    slug: "post-two",
-    title: "THREE",
-    description:
-      "Learn how to create a blog website using the Qwik frontend framework.",
-    date: "2024-05-20",
-  },
-  {
-    slug: "qwik-from-react",
-    title: "Qwik from React",
-    description:
-      "Learn how to create a blog website using the Qwik frontend framework.",
-    date: "2024-05-20",
-  },
 ];

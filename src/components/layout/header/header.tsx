@@ -18,7 +18,6 @@ export const Header = component$<HeaderProps>((props) => {
         props.class,
       )}
     >
-      {/* Desktop Navigation */}
       <div class="hidden md:flex items-center justify-between">
         <div class="flex items-center gap-2">
           <HeaderNavLink exact href="/" title="home" />
@@ -30,7 +29,6 @@ export const Header = component$<HeaderProps>((props) => {
         <HeaderLogo />
       </div>
 
-      {/* Mobile Navigation */}
       <div class="md:hidden relative w-full h-full flex items-center justify-center">
         <HeaderLogo />
       </div>

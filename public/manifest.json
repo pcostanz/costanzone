@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "costan.zone",
-  "short_name": "the costanzone",
+  "short_name": "costanzone",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "the costanzone"
+  "description": "costanzone"
 }

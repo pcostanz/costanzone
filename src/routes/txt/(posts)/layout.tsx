@@ -1,29 +1,43 @@
 import { Slot, component$ } from "@builder.io/qwik";
-import { useDocumentHead, Link } from "@builder.io/qwik-city";
+import { useDocumentHead, Link, useLocation } from "@builder.io/qwik-city";
 // import { formatDate } from "~/utils/formatDate"
 import { POSTS } from "./posts";
 
 export default component$(() => {
   const head = useDocumentHead();
+  const location = useLocation();
+
+  console.log("location", location.url.pathname);
 
   return (
-    <div class="flex flex-col lg:flex-row">
+    <div class="flex flex-col lg:flex-row gap-24">
       {/* Left column - List */}
       <div class="w-full lg:w-1/3 p-4">
         <ul class="text-center gap-8 max-w-xs mx-auto flex flex-col">
-          {POSTS.map((post) => (
-            <Link key={post.slug} href={`/txt/${post.slug}`}>
-              <li class="border-green-300 border-2 pb-4 h-24 bg-gray-950/75">
-                {/* <time dateTime={post.date}>{formatDate(post.date)}</time> */}
-                <h2>{post.title}</h2>
-              </li>
-            </Link>
-          ))}
+          {POSTS.map((post) => {
+            const isActive = location.url.pathname === `/txt/${post.slug}/`;
+            return (
+              <Link key={post.slug} href={`/txt/${post.slug}`}>
+                <li
+                  class={`border-2 pb-4 h-24 transition-all duration-200 ${
+                    isActive
+                      ? "border-foreground bg-foreground text-background shadow-lg shadow-green-400/20"
+                      : "border-green-300 bg-background/75 hover:bg-background/90"
+                  }`}
+                >
+                  {/* <time dateTime={post.date}>{formatDate(post.date)}</time> */}
+                  <h2 class={isActive ? "text-black font-semibold" : ""}>
+                    {post.title}
+                  </h2>
+                </li>
+              </Link>
+            );
+          })}
         </ul>
       </div>
       {/* Right column - Post content */}
       <div class="w-full lg:w-2/3 p-4">
-        <article class="max-w-6xl mx-auto px-4 py-8 leading-relaxed text-lg rounded-xl">
+        <article class="max-w-6xl mx-auto px-4 py-8 leading-relaxed text-lg border-2 border-foreground bg-background/55">
           <header>
             <h1>{head.title}</h1>
             <time dateTime={head.frontmatter.date}>

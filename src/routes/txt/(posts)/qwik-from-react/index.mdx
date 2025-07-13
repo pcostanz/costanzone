@@ -6,7 +6,7 @@ og:
   - title: true
     description: true
   # - image: /images/my-image.jpg
-    # image:alt: A picture of me
+  # image:alt: A picture of me
 ---
 
 # Welcome to My First Post
@@ -32,7 +32,7 @@ Qwik addresses these challenges head-on by:
 Here's a simple Qwik component:
 
 ```tsx
-import { component$ } from '@builder.io/qwik';
+import { component$ } from "@builder.io/qwik";
 
 export const Greeting = component$(() => {
   return <h1>Hello from Qwik!</h1>;
@@ -42,17 +42,15 @@ export const Greeting = component$(() => {
 And here's how you might handle state:
 
 ```tsx
-import { component$, useSignal } from '@builder.io/qwik';
+import { component$, useSignal } from "@builder.io/qwik";
 
 export const Counter = component$(() => {
   const count = useSignal(0);
-  
+
   return (
     <div>
       <p>Count: {count.value}</p>
-      <button onClick$={() => count.value++}>
-        Increment
-      </button>
+      <button onClick$={() => count.value++}>Increment</button>
     </div>
   );
 });
@@ -65,6 +63,7 @@ Coming from React, the transition to Qwik can be both exciting and challenging. 
 ### Component Definition
 
 **React:**
+
 ```jsx
 const MyComponent = () => {
   return <div>Hello World</div>;
@@ -72,6 +71,7 @@ const MyComponent = () => {
 ```
 
 **Qwik:**
+
 ```tsx
 const MyComponent = component$(() => {
   return <div>Hello World</div>;
@@ -81,11 +81,13 @@ const MyComponent = component$(() => {
 ### State Management
 
 **React:**
+
 ```jsx
 const [count, setCount] = useState(0);
 ```
 
 **Qwik:**
+
 ```tsx
 const count = useSignal(0);
 ```
@@ -127,10 +129,10 @@ As you dive deeper into Qwik, you'll encounter several advanced concepts:
 Qwik's resource loading system is incredibly powerful:
 
 ```tsx
-import { resource$ } from '@builder.io/qwik';
+import { resource$ } from "@builder.io/qwik";
 
 export const useUserData = resource$(async () => {
-  const response = await fetch('/api/user');
+  const response = await fetch("/api/user");
   return response.json();
 });
 ```
@@ -140,13 +142,13 @@ export const useUserData = resource$(async () => {
 Event handling in Qwik is optimized for performance:
 
 ```tsx
-import { component$, $ } from '@builder.io/qwik';
+import { component$, $ } from "@builder.io/qwik";
 
 export const Button = component$(() => {
   const handleClick = $(() => {
-    console.log('Button clicked!');
+    console.log("Button clicked!");
   });
-  
+
   return <button onClick$={handleClick}>Click me</button>;
 });
 ```
